@@ -21,7 +21,7 @@ export const AddDoctor = async (payload) => {
     });
     return {
       success: true,
-      message: "Doctor added successfully , please wait for approval",
+      message: "Coach added successfully , please wait for approval",
     };
   } catch (error) {
     return {
@@ -39,7 +39,7 @@ export const CheckIfDoctorAccountIsApplied = async (id) => {
     if (doctors.size > 0) {
       return {
         success: true,
-        message: "Doctor account already applied",
+        message: "Coach account already applied",
         data : doctors.docs.map((doc) => {
           return {
             ...doc.data(),
@@ -50,7 +50,7 @@ export const CheckIfDoctorAccountIsApplied = async (id) => {
     }
     return {
       success: false,
-      message: "Doctor account not applied",
+      message: "Coach account not applied",
     };
   } catch (error) {
     return {
@@ -86,7 +86,7 @@ export const UpdateDoctor = async (payload) => {
     await setDoc(doc(firestoreDatabase, "doctors", payload.id), payload);
     return {
       success: true,
-      message: "Doctor updated successfully",
+      message: "Coach updated successfully",
     };
   } catch (error) {
     return {

@@ -41,7 +41,7 @@ function BookAppointment() {
     const day = moment(date).format("dddd");
     if (!doctor.days.includes(day)) {
       return (
-        <h3>Doctor is not available on {moment(date).format("DD-MM-YYYY")}</h3>
+        <h3>Coach is not available on {moment(date).format("DD-MM-YYYY")}</h3>
       );
     }
 
